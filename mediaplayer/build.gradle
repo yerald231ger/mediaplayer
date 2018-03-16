@@ -5,6 +5,9 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
+        multiDexEnabled true
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -14,6 +17,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+    compileOptions {
     }
 }
 
